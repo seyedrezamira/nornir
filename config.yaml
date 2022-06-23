@@ -1,0 +1,10 @@
+inventory:
+    plugin: SimpleInventory
+    options:
+        host_file: "/Users/reza/Desktop/Automation/Ptyhon-Scripts/hosts.yaml"
+        group_file: "/Users/reza/Desktop/Automation/Ptyhon-Scripts/groups.yaml"
+        defaults_file: "/Users/reza/Desktop/Automation/Ptyhon-Scripts/defaults.yaml"
+runner:
+    plugin: threaded
+    options:
+        num_workers: 100

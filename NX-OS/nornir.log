@@ -1,0 +1,753 @@
+2022-02-20 09:05:55,980 -  nornir.core -     INFO -        run() - Running task 'get_ip' with args {} on 6 hosts
+2022-02-20 09:06:11,064 - nornir.core.task -    ERROR -      start() - Host 'Leaf2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:06:11,064 - nornir.core.task -    ERROR -      start() - Host 'Spine1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:06:11,064 - nornir.core.task -    ERROR -      start() - Host 'Leaf3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:06:11,064 - nornir.core.task -    ERROR -      start() - Host 'Spine2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:06:11,064 - nornir.core.task -    ERROR -      start() - Host 'Leaf1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:06:11,067 - nornir.core.task -    ERROR -      start() - Host 'Leaf4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:06:11,071 - nornir.core.task -    ERROR -      start() - Host 'Leaf2': task 'get_ip' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/05.IP-hunter.py", line 9, in get_ip
+    response = task.run(task=send_command, command="show interface")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:06:11,071 - nornir.core.task -    ERROR -      start() - Host 'Leaf3': task 'get_ip' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/05.IP-hunter.py", line 9, in get_ip
+    response = task.run(task=send_command, command="show interface")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:06:11,071 - nornir.core.task -    ERROR -      start() - Host 'Spine1': task 'get_ip' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/05.IP-hunter.py", line 9, in get_ip
+    response = task.run(task=send_command, command="show interface")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:06:11,071 - nornir.core.task -    ERROR -      start() - Host 'Spine2': task 'get_ip' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/05.IP-hunter.py", line 9, in get_ip
+    response = task.run(task=send_command, command="show interface")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:06:11,071 - nornir.core.task -    ERROR -      start() - Host 'Leaf1': task 'get_ip' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/05.IP-hunter.py", line 9, in get_ip
+    response = task.run(task=send_command, command="show interface")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:06:11,071 - nornir.core.task -    ERROR -      start() - Host 'Leaf4': task 'get_ip' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/05.IP-hunter.py", line 9, in get_ip
+    response = task.run(task=send_command, command="show interface")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:14:32,208 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-02-20 09:14:47,294 - nornir.core.task -    ERROR -      start() - Host 'Leaf2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:14:47,294 - nornir.core.task -    ERROR -      start() - Host 'Leaf4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:14:47,295 - nornir.core.task -    ERROR -      start() - Host 'Leaf1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:14:47,295 - nornir.core.task -    ERROR -      start() - Host 'Leaf3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:14:47,295 - nornir.core.task -    ERROR -      start() - Host 'Spine2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:14:47,296 - nornir.core.task -    ERROR -      start() - Host 'Leaf2': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip routes")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:14:47,296 - nornir.core.task -    ERROR -      start() - Host 'Spine1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:14:47,296 - nornir.core.task -    ERROR -      start() - Host 'Leaf3': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip routes")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:14:47,296 - nornir.core.task -    ERROR -      start() - Host 'Leaf1': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip routes")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:14:47,296 - nornir.core.task -    ERROR -      start() - Host 'Leaf4': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip routes")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:14:47,296 - nornir.core.task -    ERROR -      start() - Host 'Spine2': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip routes")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:14:47,296 - nornir.core.task -    ERROR -      start() - Host 'Spine1': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip routes")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:15:33,693 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-02-20 09:15:48,782 - nornir.core.task -    ERROR -      start() - Host 'Leaf4': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:15:48,782 - nornir.core.task -    ERROR -      start() - Host 'Leaf1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:15:48,783 - nornir.core.task -    ERROR -      start() - Host 'Spine1': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:15:48,783 - nornir.core.task -    ERROR -      start() - Host 'Leaf3': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:15:48,783 - nornir.core.task -    ERROR -      start() - Host 'Leaf2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:15:48,783 - nornir.core.task -    ERROR -      start() - Host 'Spine2': task 'send_command' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/tasks/core/send_command.py", line 36, in send_command
+    scrapli_conn = task.host.get_connection("scrapli", task.nornir.config)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 494, in get_connection
+    self.open_connection(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/inventory.py", line 546, in open_connection
+    conn_obj.open(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir_scrapli/connection.py", line 98, in open
+    connection.open()
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/driver/base/sync_driver.py", line 86, in open
+    self.channel.channel_authenticate_ssh(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 280, in decorate
+    return self._multiprocessing_timeout(
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/decorators.py", line 341, in _multiprocessing_timeout
+    return future.result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.8/lib/python3.8/concurrent/futures/thread.py", line 57, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/sync_channel.py", line 290, in channel_authenticate_ssh
+    self._ssh_message_handler(output=authenticate_buf)
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/scrapli/channel/base_channel.py", line 432, in _ssh_message_handler
+    raise ScrapliAuthenticationFailed(msg)
+scrapli.exceptions.ScrapliAuthenticationFailed: Timed out connecting to host
+
+2022-02-20 09:15:48,784 - nornir.core.task -    ERROR -      start() - Host 'Leaf4': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip route")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:15:48,784 - nornir.core.task -    ERROR -      start() - Host 'Leaf1': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip route")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:15:48,784 - nornir.core.task -    ERROR -      start() - Host 'Leaf3': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip route")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:15:48,784 - nornir.core.task -    ERROR -      start() - Host 'Leaf2': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip route")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:15:48,784 - nornir.core.task -    ERROR -      start() - Host 'Spine1': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip route")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:15:48,785 - nornir.core.task -    ERROR -      start() - Host 'Spine2': task 'get_routes' failed with traceback:
+Traceback (most recent call last):
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 99, in start
+    r = self.task(self, **self.params)
+  File "/Users/reza/Desktop/Automation/Ptyhon-Scripts/NX-OS/06.IP_route_genie.py", line 11, in get_routes
+    response = task.run(task=send_command, command="show ip route")
+  File "/Users/reza/Library/Python/3.8/lib/python/site-packages/nornir/core/task.py", line 174, in run
+    raise NornirSubTaskError(task=run_task, result=r)
+nornir.core.exceptions.NornirSubTaskError: Subtask: send_command (failed)
+
+
+2022-02-20 09:18:20,093 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-02-20 09:20:02,621 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-02-20 09:24:24,032 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-02-20 09:28:14,160 -  nornir.core -     INFO -        run() - Running task 'pull_info' with args {} on 6 hosts
+2022-02-23 23:18:30,915 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-02-23 23:29:49,533 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-02-23 23:32:00,412 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-02-23 23:32:12,620 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-02-23 23:32:31,663 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-02-23 23:34:23,769 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-03-04 10:39:56,018 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts
+2022-03-05 11:12:52,354 -  nornir.core -     INFO -        run() - Running task 'get_routes' with args {} on 6 hosts

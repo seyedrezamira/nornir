@@ -1,0 +1,18 @@
+R1:
+    hostname: 10.100.2.178
+    platform: 'ios'
+    username: reza
+    groups:
+        - cisco_routers
+R2:
+    hostname: 10.100.2.179
+    platform: 'ios'
+    username: reza
+    groups:
+        - cisco_routers
+R3:
+    hostname: 10.100.2.180
+    platform: 'ios'
+    username: reza
+    groups:
+        - cisco_routers

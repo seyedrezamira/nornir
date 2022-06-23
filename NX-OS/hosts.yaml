@@ -1,0 +1,36 @@
+Spine1:
+    hostname: 10.100.2.182
+    platform: 'cisco_nxos'
+    username: reza
+    groups:
+        - cisco_routers
+Spine2:
+    hostname: 10.100.2.183
+    platform: 'cisco_nxos'
+    username: reza
+    groups:
+        - cisco_routers
+Leaf4:
+    hostname: 10.100.2.186
+    platform: 'cisco_nxos'
+    username: reza
+    groups:
+        - cisco_routers
+Leaf3:
+    hostname: 10.100.2.187
+    platform: 'cisco_nxos'
+    username: reza
+    groups:
+        - cisco_routers
+Leaf1:
+    hostname: 10.100.2.188
+    platform: 'cisco_nxos'
+    username: reza
+    groups:
+       - cisco_routers
+Leaf2:
+    hostname: 10.100.2.187
+    platform: 'cisco_nxos'
+    username: reza
+    groups:
+       - cisco_routers
